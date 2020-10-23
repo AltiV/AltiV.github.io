@@ -1,13 +1,18 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 
-import Welcome from "./components/test-component";
+import { Route } from "react-router-dom";
+
+import Navbar from "./components/navbar-component";
+
+import Home from "./components/home-component";
+import Resume from "./components/resume-component";
 
 function App() {
   return (
     <>
-      <h2>Website is currently under construction. Stay tuned...</h2>
+      <Navbar />
+      <Route path="/" exact component={Home} />
+      <Route path="/resume" component={Resume} />
     </>
   );
 }
