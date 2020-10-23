@@ -22,9 +22,9 @@ import {
 
 import {
   ArrowBack,
-  AssignmentInd,
   Home,
-  Apps,
+  PictureAsPdf,
+  Web,
   ContactMail,
   List as ListIcon,
 } from "@material-ui/icons";
@@ -41,35 +41,42 @@ const menuItems = [
     listPath: "/",
   },
   {
-    listIcon: <AssignmentInd />,
+    listIcon: <Web />,
+    listText: "Portfolio",
+    listPath: "/portfolio",
+  },
+  {
+    listIcon: <PictureAsPdf />,
     listText: "Resume",
     listPath: "/resume",
   },
   {
-    listIcon: <Apps />,
-    listText: "Portfolio",
-  },
-  {
     listIcon: <ContactMail />,
-    listText: "Contacts",
+    listText: "Contact Me",
+    listPath: "/contact",
   },
 ];
 
 // CSS STYLES
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
-    width: 250,
-    background: "azure",
+    width: 300,
+    background: "#3385ff",
     height: "100%",
   },
   avatar: {
     display: "block",
     margin: "0.5rem auto",
-    width: theme.spacing(13),
-    height: theme.spacing(13),
+    width: theme.spacing(15),
+    height: theme.spacing(15),
   },
   listItem: {
-    color: "tan",
+    color: "white",
+  },
+  logo: {
+    display: "block",
+    margin: "0.5rem auto",
+    width: theme.spacing(25),
   },
 }));
 
@@ -90,7 +97,21 @@ const Navbar = () => {
       component="div"
       onClick={() => toggleSidebar("left", false)}
     >
-      <Avatar className={classes.avatar} src={avatar} alt="AltiV" />
+      {/* <Avatar
+        className={classes.avatar}
+        src={avatar}
+        alt="AltiV"
+        component={Link}
+        to="/"
+      /> */}
+
+      <img
+        alt="AltiV"
+        src={name_white}
+        className={classes.logo}
+        component={Link}
+        to="/"
+      />
       <Divider />
       <List>
         {menuItems.map((listItem, key) => (
