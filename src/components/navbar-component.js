@@ -31,7 +31,6 @@ import {
 
 import { makeStyles } from "@material-ui/core/styles";
 
-import avatar from "../images/avatar.png";
 import name_white from "../images/name_white.png";
 
 const menuItems = [
