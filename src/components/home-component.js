@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Grid, Avatar, Typography } from "@material-ui/core";
+import { Grid, Avatar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import avatar from "../images/avatar.png";
@@ -8,18 +8,16 @@ import avatar from "../images/avatar.png";
 // CSS STYLES
 const useStyles = makeStyles((theme) => ({
   mainBox: {
-    // position: "absolute",
-    // top: "50%",
-    // width: "80%",
-    // margin: "auto",
-    border: "5px solid black",
-    // textAlign: "center",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    position: "absolute",
     display: "flex",
     color: "white",
-  },
-  gridItem: {
-    textAlign: "center",
-    border: "5px solid red",
+    width: "80%",
+    background:
+      "linear-gradient(45deg, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0.8) 80%)",
+    boxShadow: "0 3px 3px 0px rgba(50, 50, 50, .5)",
   },
   avatar: {
     width: theme.spacing(15),
@@ -31,29 +29,29 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.mainBox}>
-      <Grid container alignItems="center" direction="row">
-        <Grid
-          item
-          xs={12}
-          sm={6}
-          direction="column"
-          justify="center"
-          alignItems="center"
-        >
-          <Avatar
-            src={avatar}
-            variant="rounded"
-            alt="Alan Vuong"
-            className={classes.avatar}
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Typography variant="h3">Alan Vuong</Typography>
-          <Typography variant="h6">Full Stack Developer</Typography>
-        </Grid>
+    <Grid
+      container
+      alignItems="center"
+      direction="row"
+      className={classes.mainBox}
+    >
+      <Grid
+        item
+        xs={12}
+        sm={6}
+      >
+        <Avatar
+          src={avatar}
+          variant="rounded"
+          alt="Alan Vuong"
+          className={classes.avatar}
+        />
       </Grid>
-    </Box>
+      <Grid item xs={12} sm={6}>
+        <Typography variant="h3">Alan Vuong</Typography>
+        <Typography variant="caption">Website in progress.</Typography>
+      </Grid>
+    </Grid>
   );
 };
 

@@ -1,5 +1,3 @@
-// https://www.youtube.com/watch?v=9Q555VoPe4M
-
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
@@ -13,7 +11,6 @@ import {
   IconButton,
   ListItemIcon,
   ListItemText,
-  Avatar,
   Divider,
   List,
   Typography,
@@ -21,11 +18,8 @@ import {
 } from "@material-ui/core";
 
 import {
-  ArrowBack,
   Home,
   PictureAsPdf,
-  Web,
-  ContactMail,
   List as ListIcon,
 } from "@material-ui/icons";
 
@@ -39,21 +33,21 @@ const menuItems = [
     listText: "Home",
     listPath: "/",
   },
-  {
-    listIcon: <Web />,
-    listText: "Portfolio",
-    listPath: "/portfolio",
-  },
+  // {
+  //   listIcon: <Web />,
+  //   listText: "Portfolio",
+  //   listPath: "/portfolio",
+  // },
   {
     listIcon: <PictureAsPdf />,
     listText: "Resume",
     listPath: "/resume",
   },
-  {
-    listIcon: <ContactMail />,
-    listText: "Contact Me",
-    listPath: "/contact",
-  },
+  // {
+  //   listIcon: <ContactMail />,
+  //   listText: "Contact Me",
+  //   listPath: "/contact",
+  // },
 ];
 
 // CSS STYLES
@@ -90,20 +84,13 @@ const Navbar = () => {
 
   const classes = useStyles();
 
-  const sideList = (slider) => (
+  const sideList = () => (
     <Box
       className={classes.menuSliderContainer}
       component="div"
       onClick={() => toggleSidebar("left", false)}
     >
-      {/* <Avatar
-        className={classes.avatar}
-        src={avatar}
-        alt="AltiV"
-        component={Link}
-        to="/"
-      /> */}
-
+      {/* Currently does not work */}
       <img
         alt="AltiV"
         src={name_white}
@@ -134,7 +121,7 @@ const Navbar = () => {
         <AppBar position="static" style={{ background: "#222" }}>
           <Toolbar>
             <IconButton onClick={() => toggleSidebar("left", true)}>
-              <ListIcon style={{ color: "tomato" }} />
+              <ListIcon style={{ color: "#3385ff" }} />
             </IconButton>
             <Typography variant="h5">AltiV</Typography>
             <Drawer

@@ -5,6 +5,7 @@ import "./App.css";
 import { Route } from "react-router-dom";
 
 import Navbar from "./components/navbar-component";
+import Footer from "./components/footer-component";
 
 import Home from "./components/home-component";
 import Portfolio from "./components/portfolio-component";
@@ -19,6 +20,7 @@ function App() {
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/resume" component={Resume} />
       <Route path="/contact" component={Contact} />
+      <Footer />
     </>
   );
 }
