@@ -37,6 +37,12 @@ const projects = [
     website: "https://krrplus.web.app/",
     github: null,
   },
+  {
+    name: "Personal Website (Old)",
+    description: "HTML/CSS/Javascript",
+    website: "https://altiv.github.io/website/",
+    github: "https://github.com/AltiV/website",
+  },
 ];
 
 const Portfoilo = () => {
