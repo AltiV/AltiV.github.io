@@ -17,11 +17,7 @@ import {
   Box,
 } from "@material-ui/core";
 
-import {
-  Home,
-  PictureAsPdf,
-  List as ListIcon,
-} from "@material-ui/icons";
+import { Home, Web, PictureAsPdf, List as ListIcon } from "@material-ui/icons";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -33,11 +29,11 @@ const menuItems = [
     listText: "Home",
     listPath: "/",
   },
-  // {
-  //   listIcon: <Web />,
-  //   listText: "Portfolio",
-  //   listPath: "/portfolio",
-  // },
+  {
+    listIcon: <Web />,
+    listText: "Portfolio",
+    listPath: "/portfolio",
+  },
   {
     listIcon: <PictureAsPdf />,
     listText: "Resume",
