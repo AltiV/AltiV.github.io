@@ -28,7 +28,7 @@ const useStyles = makeStyles({
 
 const Footer = () => {
   const classes = useStyles();
-  
+
   // Seems like using BottomNavigationAction with a tag is considered anti-pattern, so need to fix this
   return (
     <BottomNavigation width="auto" className={classes.bottom}>

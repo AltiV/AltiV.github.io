@@ -12,10 +12,13 @@ import Portfolio from "./components/portfolio-component";
 import Resume from "./components/resume-component";
 import Contact from "./components/contact-component";
 
+import { Toolbar } from "@material-ui/core";
+
 function App() {
   return (
     <>
       <Navbar />
+      <Toolbar></Toolbar>
       <Route path="/" exact component={Home} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/resume" component={Resume} />

@@ -112,25 +112,21 @@ const Navbar = () => {
   );
 
   return (
-    <>
-      <Box component="nav">
-        <AppBar position="static" style={{ background: "#222" }}>
-          <Toolbar>
-            <IconButton onClick={() => toggleSidebar("left", true)}>
-              <ListIcon style={{ color: "#3385ff" }} />
-            </IconButton>
-            <Typography variant="h5">AltiV</Typography>
-            <Drawer
-              anchor="left"
-              open={state.left}
-              onClose={() => toggleSidebar("left", false)}
-            >
-              {sideList("left")}
-            </Drawer>
-          </Toolbar>
-        </AppBar>
-      </Box>
-    </>
+    <AppBar style={{ background: "#222" }}>
+      <Toolbar>
+        <IconButton onClick={() => toggleSidebar("left", true)}>
+          <ListIcon style={{ color: "#3385ff" }} />
+        </IconButton>
+        <Typography variant="h5">AltiV</Typography>
+        <Drawer
+          anchor="left"
+          open={state.left}
+          onClose={() => toggleSidebar("left", false)}
+        >
+          {sideList("left")}
+        </Drawer>
+      </Toolbar>
+    </AppBar>
   );
 };
 
