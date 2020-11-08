@@ -17,7 +17,13 @@ import {
   Box,
 } from "@material-ui/core";
 
-import { Home, Web, PictureAsPdf, List as ListIcon } from "@material-ui/icons";
+import {
+  Home,
+  Web,
+  PictureAsPdf,
+  ContactMail,
+  List as ListIcon,
+} from "@material-ui/icons";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -39,11 +45,11 @@ const menuItems = [
     listText: "Resume",
     listPath: "/resume",
   },
-  // {
-  //   listIcon: <ContactMail />,
-  //   listText: "Contact Me",
-  //   listPath: "/contact",
-  // },
+  {
+    listIcon: <ContactMail />,
+    listText: "Contact Me",
+    listPath: "/contact",
+  },
 ];
 
 // CSS STYLES
