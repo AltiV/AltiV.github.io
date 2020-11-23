@@ -49,7 +49,7 @@ const Home = () => {
       </Grid>
       <Grid item xs={12} sm={6}>
         <Typography variant="h3">Alan Vuong</Typography>
-        <Typography variant="caption">Website in progress.</Typography>
+        <Typography variant="caption">Full stack web developer.</Typography>
       </Grid>
     </Grid>
   );
